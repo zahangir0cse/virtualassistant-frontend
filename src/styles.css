@@ -1,0 +1,102 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~font-awesome/css/font-awesome.min.css';
+@import './assets/theme.scss';
+/* @font-face {
+  font-family: 'Alegreya Sans SC';
+  src: url('assets/fonts/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf');
+} */
+@font-face {
+  font-family: 'Questrial';
+  src: url('assets/fonts/Questrial-Regular.ttf');
+}
+@font-face {
+  font-family: 'Bitter';
+  src: url('assets/fonts/Bitter/Bitter-Regular.ttf');
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('assets/fonts/OpenSans.ttf');
+}
+
+.section-title {
+  padding-top: 40px;
+  font-size: 40px;
+  text-align: center;
+  position: relative;
+  /* font-family: 'Alegreya Sans SC', sans-serif; */
+}
+
+.section-title:before {
+  width: 50px;
+  height: 4px;
+}
+
+.section-title:after {
+  width: 350px;
+  height: 1px;
+}
+
+.section-title:before,
+.section-title:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+  margin: 1px auto;
+}
+
+.section-title.black:after {
+  /* background: rgba(52, 59, 170, 0.4); */
+  background: #0E893F;
+}
+.section-title.black:before {
+  background: #0E893F;
+}
+.section-title.white {
+  color: white;
+}
+.section-title.white:after {
+  background: rgba(255, 255, 255, 0.2);
+}
+.section-title.white:before {
+  background: white;
+}
+
+.details-title {
+  display: block;
+  font-size: 25px;
+  font-weight: 400;
+  padding: 10px 0 5px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  /* color: #212121; */
+  color: white;
+  background: #0E893F;
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: 25px;
+  }
+  .section-title:before,
+  .section-title:after {
+    bottom: -1px;
+  }
+  .section-title:after {
+    width: 250px;
+  }
+}
+
+* {
+  font-size: 14px;
+}
+
+.btn-primary{
+  background-color: #0E893F;
+}
+
+.multiselect-dropdown .dropdown-btn .selected-item{
+  background-color: #0E893F !important;
+}

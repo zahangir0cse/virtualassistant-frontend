@@ -1,0 +1,153 @@
+@import '../../../assets/theme.scss';
+
+.fieldset {
+  margin-bottom: 15px;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'] {
+  color: #9db2c2;
+  background-color: #fff;
+  border: 1px solid #e1eaf0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: text;
+  width: 100%;
+  transition: all 0.1s linear;
+}
+
+::placeholder {
+  color: #9db2c2;
+  opacity: 1;
+}
+
+input[type='text']:focus,
+input[type='password']:focus,
+input[type='email']:focus {
+  color: #96307e;
+  border-left: 3px solid #96307e;
+  outline: none;
+}
+
+button,
+.submit-button {
+  color: #fff;
+  background-color: $accent-color;
+  border-color: $accent-color;
+  padding: 13px 15px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+button:hover,
+.submit-button:hover {
+  background-color: $web-color;
+  border-color: $web-color;
+}
+
+button i,
+.submit-button i {
+  font-size: 0.8em;
+  top: 1px;
+  margin-left: 5px;
+}
+
+i {
+  position: relative;
+  transition: all 0.1s linear;
+}
+
+.login {
+  display: table;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, blue 0%, #111629 100%);
+  &::before {
+    content: '';
+    position: fixed;
+    left: -22%;
+    top: 50%;
+    right: 0;
+    width: 125%;
+    height: 100%;
+    background: linear-gradient(135deg, blue 0%, #111629 100%);
+    transform: rotate(15deg);
+  }
+  &-container {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    padding: 20px;
+    &-block {
+      width: 330px;
+      margin: auto;
+      position: relative;
+    }
+    &-logo {
+      background-size: contain;
+      background-position: left;
+      background-repeat: no-repeat;
+      margin-bottom: 10px;
+      text-align: left;
+      position: relative;
+      width: 200px;
+      height: 80px;
+      cursor: pointer;
+    }
+  }
+  &-toggle {
+    position: absolute;
+    right: 0;
+    top: 7px;
+    left: auto;
+    font-size: 22px;
+    & a {
+      color: #9db2c2;
+      padding: 6px 10px 7px 10px;
+      border-radius: 50px;
+      font-size: 0.7em;
+      &:hover {
+        color: $accent-color;
+      }
+      &.active {
+        color: #fff;
+        background-color: #9db2c2;
+      }
+    }
+  }
+  &-form {
+    &-submit-button {
+      font-weight: 300;
+      background-color:  $accent-color;
+      color: white;
+      &:hover {
+        color: black;
+        background-color: white;
+      }
+      & i {
+        font-weight: 100;
+      }
+      &:hover i {
+        margin-left: 15px;
+      }
+    }
+
+    &-password-reset {
+      color:  $accent-color;
+      text-align: left;
+      font-size: 14px;
+      margin-top: 15px;
+      & a {
+        color: black;
+        text-decoration: underline;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}

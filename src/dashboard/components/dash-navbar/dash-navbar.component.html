@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-md navbar-light py-2 shadow-sm">
+  <button class="navbar-toggler" type="button" (click)="toggleCollapse()" data-toggle="collapse"
+          data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+          aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse" [class.show]="show">
+    <nav class="navbar-nav mr-auto">
+      <a class="nav-link" [routerLink]="dashboardLink" style="margin-top: 3px;">Dashboard</a>
+      </nav>
+
+    <ul class="navbar-nav">
+      <li class="nav-item text-right">
+        <div ngbDropdown class="d-inline-block">
+          <a class="nav-link" id="serviceAdminAccounting" ngbDropdownToggle>
+            <span class="user-name">User Home</span>
+          </a>
+        </div>
+      </li>
+      <li class="nav-item text-right" (click)="logout()" style="padding-top: 12px;">
+        <span class="nav-link text-danger font-weight-bold"> Logout </span>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,31 @@
+.float {
+  cursor: pointer;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #3fd0d4;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  z-index: 99;
+  //   box-shadow: 2px 2px 3px #999;
+}
+
+.my-float {
+  margin-top: 22px;
+}
+
+@media (max-width: 767px) {
+  .float {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 20px;
+  }
+  .my-float {
+    margin-top: 12px;
+  }
+}
