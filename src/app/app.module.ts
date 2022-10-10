@@ -19,10 +19,6 @@ import {HomeModule} from '../home/home.module';
 // routes
 export const ROUTES: Routes = [
   {
-    path: 'dashboard',
-    loadChildren: () => import('../dashboard/dashboard.module').then(m => m.DashboardModule), canActivate: [AuthGuardService]
-  },
-  {
     path: '',
     loadChildren: () => import('../home/home.module').then(m => m.HomeModule)
   }
